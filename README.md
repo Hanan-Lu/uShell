@@ -115,6 +115,53 @@ int main(void)
 }
 ```
 
+## Shell使用实例
+
+        以下列出了实际运行效果
+
+        变量赋值支持 “变量名=变量值” 及 “变量名 变量值”形式
+
+```bash
+        _____ _    _ ______ _      _      
+       / ____| |  | |  ____| |    | |     
+ _   _| (___ | |__| | |__  | |    | |     
+| | | |\___ \|  __  |  __| | |    | |     
+| |_| |____) | |  | | |____| |____| |____ 
+ \__,_|_____/|_|  |_|______|______|______|
+
+uShell# help
+********************Function********************
+
+clear               --------          Clear Screen
+help                --------          List All Command and Variable
+listVar             --------          List All Variable
+listCmd             --------          List All Command
+listAll             --------          List All Command and Variable
+echo                --------          Print String
+atoi                --------          Test ASCII to Int Func
+atof                --------          Test ASCII to float Func
+strcontain          --------          Whether String 1 contains String 1
+
+********************Variable********************
+
+blkSpace            val=:        20  --------          LED Toggle Space
+
+uShell# atoi 0x1234
+return: 0, intVal = 4660
+uShell# blkSpace 
+blkSpace = 20, 0x14
+uShell# blkSpace=100
+blkSpace = 100, 0x64
+uShell# blkSpace 20 
+blkSpace = 20, 0x14
+uShell# echo "hello World!"
+hello World!
+uShell# 
+
+
+```
+
+
 ## 注意事项
 
 因本人水平有限，程序之中一定存在bug及不合理的地方，欢迎大家指正。
